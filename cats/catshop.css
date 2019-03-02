@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    text-align: center;
+    color: red;
+    font: normal 55px Gloria Hallelujah, cursive;
+    padding-bottom: 20px;
+}
+
+article {
+    padding: 15px;
+}
+
+img {
+    max-width: 300px;
+    max-height: 250px;
+    margin: 0px 25px 0px 25px;
+}
+div {
+    padding: 5px 25px 5px 25px;
+}
+.foto {
+    height: 250px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: table;
+}
+.foto p {
+    display: table-cell;
+    vertical-align: bottom;
+}
+.name {
+    font: normal 25px Arial;
+    color: blue;
+    text-decoration: underline;
+    }
+.name-wrapper{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.category{
+    font: normal 15px Arial;
+    color: gray;
+    text-decoration: underline;
+    }
+.price{
+    font: bold 25px Arial;
+    color: red;
+    }
+
+
+/*звезды начало*/
+
+.rating:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+    clip:rect(0,0,0,0);
+}
+
+.rating:not(:checked) > label {
+    float:right;
+    width:1em;
+    padding:0 .1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:200%;
+    line-height:1.2;
+    color:#ddd;
+    text-shadow:1px 1px #bbb, 2px 2px #666, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating:not(:checked) > label:before {
+    content: '★ ';
+}
+
+.rating > input:checked ~ label {
+    color: #f70;
+    text-shadow:1px 1px #c60, 2px 2px #940, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+    color: gold;
+    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+    color: #ea0;
+    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+}
+.rating > label:active {
+    position:relative;
+    top:2px;
+    left:2px;
+}
+
+/*конец звезды*/
+
+
+article:hover a {color: red;}
+
+article:hover .foto img{
+    opacity: 0.7;
+}
+
+#clicktiles:checked ~ article {
+    float: left;
+    height: 700px;
+    width: 350px;
+}
+
+#clicklist:checked ~ article{
+    height: 400px;
+}
+#clicklist:checked ~ article div.foto{
+    width: 30%;
+    float: left;
+}
+
+#clicklist:checked ~ article div.info{
+    width: 35%;
+    float: left;
+    margin-right: 25px;
+    margin-top: 15px;
+}
+#clicklist:checked ~ article p.description{
+    width: 20%;
+    float: left;
+}

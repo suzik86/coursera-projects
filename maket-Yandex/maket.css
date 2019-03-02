@@ -1,0 +1,228 @@
+.wrapper{
+    width: 993px;
+    height: 4633px;
+    margin: 0 auto;
+}
+#fon {
+    position: absolute;
+    z-index: 2;
+    margin-top: 72px;
+}
+#alex, #maxim, #goga{display: none;}
+main{
+    width:952px;
+    margin: 0 auto;
+    height: 4593px;
+    margin-top: 30px;
+    border: 2px solid black;
+    transition: background-color 1s;
+    background-color: white;
+
+}
+header{
+    height: 543px;
+    }
+#logo {
+    margin-top: -2px;
+    margin-left: 406px;
+}
+h1 {
+    font: 44px Arial, Helvetica, sans-serif;
+    margin-top: 276px;
+    margin-left: 81px;
+    text-align: center;
+    margin-right: 80px;
+    position: relative;
+    z-index: 3;
+    text-indent: -8.8px;
+    line-height: 1.1;
+}
+h1 img {margin-bottom: 16px;}
+hr {
+    border: 0 none;
+    border-top: 2px solid black;
+}
+.firstsection{
+    display: flex;
+    margin-bottom: 57px;
+}
+.firstsection div {
+    margin-top: 51px;
+}
+.text {
+    margin-right: 97px;
+}
+p {
+    font: 16px Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+.text p{
+    margin-left: 93px;
+    width: 450px;
+    position: relative;
+    z-index: 3;
+}
+.firstparagraph {margin-bottom: 28px;}
+.secondparagraph {margin-bottom: 27px;}
+.thirdparagraph {margin-bottom: 21px;}
+
+.videobutton {
+    padding-top: 21px;
+}
+.videobutton p {margin-top: 11px;}
+#video{
+    width: 138px;
+    height: 80px;
+    border: 2px solid;
+    border-radius: 4px;
+    background-color: transparent;
+    background-image: url('images/rec.png');
+    background-position: 57px 20px;
+    background-repeat: no-repeat;
+}
+
+label{display: inline-block;}
+
+.people, .people2{
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    width: 626px;
+}
+.people{
+    margin-left: 162px;
+    margin-top: 70px;
+    height: 318px;}
+.people2{
+    margin-left: 164px;
+    margin-bottom: 56px;
+    margin-top: -4px;
+}
+
+
+#maxim:checked ~ main{
+    background-color: #ffe05d;
+}
+#alex:checked ~ main{
+    background-color: #ff8283;
+}
+#goga:checked ~ main{
+    background-color: #72c4f6;
+}
+
+label::after{
+    display: none;
+    content: attr(data-description);
+    width: 300px;
+    height: 70px;
+    z-index:4;
+    position: absolute;
+    top: 207px;
+    background-color: transparent;
+    color: black;
+    font: 16px Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.maxim-text::after {left: -69px;}
+.alex-text::after {left: 164px;}
+.goga-text::after {left: 404px;}
+
+#maxim:checked ~ main label.maxim-text::after{
+    display: block;
+}
+#alex:checked ~ main label.alex-text::after{
+    display: block;
+}
+#goga:checked ~ main label.goga-text::after{
+    display: block;
+}
+.man-wrapper {
+    width: 152px;
+    height: 152px;
+    border: 3px solid transparent;
+    border-radius: 79px;
+}
+.man{
+    width: 140px;
+    height: 140px;
+    overflow: hidden;
+    background: url("images/people5.png");
+    padding: 9px;
+    background-repeat:no-repeat;
+}
+.maxim {background-position: -2px 7px;}
+.alex {background-position:-161px 6px;}
+.goga {background-position:-320px 5px;}
+
+label:hover div{border-color: white;}
+label:hover {cursor: pointer;}
+.name{
+    font: bold 16px Arial, Helvetica, sans-serif;
+    margin-top: 5px;
+    text-align: center;
+    margin-left: 2px;
+}
+.goga-text p {margin-left: 1px;}
+.story {
+    position: relative;
+    text-align: center;
+    margin-bottom: 677px;
+}
+.group1, .group2, .group3 {
+    position:relative;
+    width: 293px;
+    height: 170px;
+}
+.group1 {
+    margin-top: 126px;
+    margin-left: 86px;
+}
+.group2{
+    margin-top: 633px;
+    margin-left: 563px;
+}
+.group3{
+    margin-top: 625px;
+    margin-left: 80px;
+}
+
+.lastsection {
+    width:450px;
+    height: 217px;
+    margin-top: 79px;
+    margin-left: 96px;
+}
+
+.social {
+    width: 188px;
+    height: 24px;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+}
+.social a {
+    width:24px;
+    height: 24px;
+    background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALwAAAAYCAYAAABAxJdTAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABTxJREFUeNrsm9dLM00UxsfYe+/YGzYQxIYN8cJ/WS+8EAVR1AsVK2JX7L23z9+83+TdrEmMeSebmOwDA8mum9mZec45zzkzRg0PD3+IAGJoaCjK2/2RkZGI7j9U3iEM5+Lhsz2arl3HCBs2whOJ/zcjHDbhbYQdoqKiREzMH2q/vr6Kj4+/QcNvwjscDpGXlydSU1NFbGys7OT+/l5sbm7aM24jqGTv7e0ViYl/nPvDw4MYHx93kt4vwsfHx4u2tjaRnJzscv3i4iJiCM/EMn4m8u7uzmZaiCA6OtpJdqlrPj9zDU/vN+Grq6u/kD0Q6O7u9ngP49rY2BBPT09a+yRiQeD393ePf5ObmysaGhpEQkKC/H57eyuWlpZkpON53iuc8JlsmhPLH90PJfhF+OzsbJfvl5eX4vHxUbunS0lJ8XqvqKhITE9Pi+vra219VlZWSrk2Pz8v3t7e3BpES0uL/Bvju7S3t8s5WF5eFnFxceL5+dl2t0EAawYfjJLGuI5+ER5PpvDy8iKmpqYCPhAIRINMNBW+ampqxOzsrLZ++O2srCzR0dEhFhYWxM3Njcv90tJSF7KbpV5+fr44Pj7WOva6ujoZNVRYtvF3rRQ3FJCYk5OTej282aKswNHRkZQNYGBgwDlYJSt04erqShIeT97V1SUODw/F3t6ejGJMplEfmnF+fi6NRDfKy8tlNIP0u7u7LlWHSASSEiegZDWScmVlRZydnemVNCUlJbLcY/RwfK+oqJCfCekQxApvrwhPnzqxs7MjiouL5e+TmEI0Gt6ViU1KSvL4bCCTV96nvr5elJWVibW1NekAzMAQeGerNb0VBQJl5FQGkZTGcSIpW1tbZaRXpCf6u3PGPyI8+tbsUSF8bW2t/EwoDxTh8awQLyMjw6ntGdD6+rp2+YARKYMyjpO+vUF3Au0OGBwLTjRZXV11yV+sILuVGBwclPM+OjrqlHOsj7txcg0eKjnD+vX19X1JorVuPOn2tkbk5OTIZsTBwYHWhFUl4AUFBX49q/tdvAHZ1dnZKecAo7fC2IIBxqXIjrP1FmHT0tJkfkleSbJKpc2cbzl+0jmlQEKGUUPyo1yjoX+tBBKrv79fJou6gEb2RQuawaLgda0O9civnp4ekZ6eHpaE91Qg8Bc/8vCU6oyhRunpmZmZgA8cIqqkFWnT3NzstPqqqirnvX8FBkxpkeoPetFXmUBi6612HygQkZA2Vjqb7+rwOoHHhms4FFX69rQHRITFuysJ7M5YHL/R6gnjJJAKmZmZWn8f4iKffCU7k2z1DjOLjwOiJAzpwxk4HgWqMe6qVFzD8I2VHLcR47dOgjmp1An0Hxm/0ai8YXFx0bKNJpWoT0xMWFIRCwVQllXO5/T0VMzNzbmsDXslrJeSlHh2nvlnSRNM4MXZzgds7hgJr3ujR+UrZPyNjY1SQrmD8iqB6N9dX8g6avGRtovLnggVQnVkA9LT3G08Aao1nvZLfg3hKUW6O2pAONdVmkQvog9JgilBFhYWekyImWQ8+8nJScDHzuJiWL5GnHAE57fw8pBeSRoz0fHskJ29Ci1JayiBxcez6qzDo8UhPZUPTxoeubO/vy+2t7ct2+rXeXTiN4PiBNF9a2tLOhpFeJwSOh8Z461sGfKED8apOyaSRmWAui6TiefAGDAyzvxHGr5bByvXiSjf1NTkzGcAu6q+wv6PJw8IRl3dxtco7m132xeimw//2YS3EbIIxClcvwg/Njbm1LeRfnLPhjXQdTDOL8JHyrlsq04f2vgeutbhPwEGAHgcpSm9U6XWAAAAAElFTkSuQmCC");
+    overflow: hidden;
+}
+
+.badoo{background-position:-32px 0;}
+.twitter{background-position:-65px 0;}
+.youtube{background-position:-98px 0;}
+.habbo{background-position:-131px 0;}
+.instagram{background-position:-163px 0;}
+
+
+footer p{
+    float: left;
+    margin-top: 87px;
+}
+.help{margin-left: 95px;}
+.contact{margin-left: 18px;}
+.address{margin-left: 80px;}
+

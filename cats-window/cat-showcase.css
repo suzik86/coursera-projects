@@ -1,0 +1,152 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body{
+    background-color: #dddddd;
+    min-width: 1000px;
+    max-width: 2000px;
+}
+
+h1 {
+    text-align: center;
+    font: bold 50px Arial, Helvetica, sans-serif;
+   }
+h2{
+    font-size: 30px;
+    color: red;
+    margin: 10px;
+}
+main {
+    display: flex;
+    padding: 2%;
+}
+
+section {
+    margin: 7px;
+    }
+
+.speciesmenu,
+.rating{
+    background-color: #B9BCBE;
+}
+.speciesmenu {margin-bottom: 17px;}
+.rating{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+}
+
+.cards-wrapper input{display: none;}
+
+.cards-wrapper {
+    display: flex;
+    flex-grow: 2;
+    width: 75%;
+    flex-wrap: wrap;
+}
+.card{
+    position: relative;
+    width: 33%;
+    overflow: hidden;
+}
+.cards-wrapper a:nth-of-type(4n+2){width: 66%;}
+
+.cards-wrapper a:nth-of-type(8n) {width: 99%;}
+
+img {
+    width: 100%;
+    margin: 0px 0px 10px 10px;
+}
+#firstcat:checked ~ a.breed1,
+#secondcat:checked ~ a.breed2,
+#thirdcat:checked ~ a.breed3,
+#fourthcat:checked ~ a.breed4,
+#fifthcat:checked ~ a.breed5,
+#sixthcat:checked ~ a.breed6,
+#seventhcat:checked ~ a.breed7,
+#eighthcat:checked ~ a.breed8{
+    opacity: 0.5;
+}
+
+.speciesmenu label:hover{
+    background: #4c4c4c;
+    color: white;
+    cursor: pointer;
+}
+
+.speciesmenu label{
+    display: block;
+    border-bottom: 1px solid slategrey;
+    padding: 10px;
+}
+.rating label {margin-left: 30px;}
+.item{margin: 10px 5px 10px 5px;}
+.item div {height:15px;}
+.ten{width:150px;}
+.nine{width:135px;}
+.eight{width:120px;}
+.seven {width:105px;}
+.six{width:90px;}
+.five {width:75px;}
+
+.ten, .nine {background: linear-gradient(to right, #00cc00, #ffffff);}
+.eight, .seven {background: linear-gradient(to right, #ccca27, #ffffff);}
+.six, .five {background: linear-gradient(to right, #cc3020, #ffffff);}
+
+p{ margin: 0;}
+
+.rating input:checked ~.item[data-order="1"] {order: 1;}
+.rating input:checked ~.item[data-order="2"] {order: 3;}
+.rating input:checked ~.item[data-order="3"] {order: 5;}
+.rating input:checked ~.item[data-order="4"] {order: 2;}
+.rating input:checked ~.item[data-order="5"] {order: 6;}
+.rating input:checked ~.item[data-order="6"] {order: 4;}
+.rating input:checked ~.item[data-order="7"] {order: 2;}
+.rating input:checked ~.item[data-order="8"] {order: 3;}
+
+
+.footer {
+    border-top: 1px solid grey;
+    width: 100%;
+    }
+
+.wrapper {
+    width: 85%;
+    margin: 0 auto;
+    min-height: 100%;
+    margin-bottom: -50px;
+}
+.footer,
+.push {
+    height: 50px;
+}
+
+.footer p{
+    margin: 20px;
+    float: left;
+    }
+address{
+    float: right;
+    margin: 20px;
+    color: #1537c4;
+}
+
+.card:hover::after
+{
+    content: attr(data-catname);
+    z-index: 2;
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    padding: 2%;
+    margin: 5%;
+    background-color: black;
+    opacity: 0.6;
+    color: white;
+    font-size: 1.4em;
+    max-width: 300px;
+}
+
